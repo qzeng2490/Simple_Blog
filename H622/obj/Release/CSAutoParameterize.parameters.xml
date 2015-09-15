@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-H622-20150622051006.mdf;Initial Catalog=aspnet-H622-20150622051006;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\qiang\\Documents\\Visual\ Studio\ 2015\\Projects\\H622\\H622\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="BlogContext-Web.config Connection String" description="BlogContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Blog11.mdf;Initial Catalog=Blog22;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\qiang\\Documents\\Visual\ Studio\ 2015\\Projects\\H622\\H622\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BlogContext']/@connectionString" />
+  </parameter>
+  <parameter name="BlogContext_DatabasePublish-Web.config Connection String" description="BlogContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="BlogContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\qiang\\Documents\\Visual\ Studio\ 2015\\Projects\\H622\\H622\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BlogContext_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>

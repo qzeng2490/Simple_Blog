@@ -1,0 +1,45 @@
+﻿@model H622.Models.Post
+@using System.Globalization
+<div class="post-preview">
+    <h2 class="post-title">
+
+        @Html.ActionLink(Model.Title, "Post", "Home", new
+   {
+       year = Model.CreateTime.Value.Year,
+       month = Model.CreateTime.Value.Month,
+       title = Model.Urlslug,
+   }, new
+   {
+       title = Model.Title
+   })
+    </h2>
+
+
+    @if (Model.Content != null && Model.Content.Length < 50)
+    {
+
+        @Html.Raw(Model.Content)
+    }
+    else if (Model.Content != null)
+    {
+
+        @Html.Raw(Model.Content.Substring(0, 50))
+    }
+
+    <p class="post-meta">
+        Posted by <a href="/Home/Index">Qiang Zeng</a>
+        @foreach (var tag in Model.Tags)
+        {
+            if (tag != null && tag.name !="")
+            {
+                @Html.ActionLink(tag.name, "Tag", "Home", new { tagname = tag.name }, null);
+                @:,
+            }
+        }
+        | @Model.CreateTime.Value.ToLocalTime().ToString("D",
+                  CultureInfo.CreateSpecificCulture("en-US"))
+    </p>
+
+</div>
+
+<hr>

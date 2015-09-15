@@ -1,0 +1,17 @@
+﻿@model IEnumerable<H622.Models.Post>
+
+<h3>Latest Posts</h3>
+@foreach (var post in Model)
+{
+    <li class="text-primary linkfont">
+        @Html.ActionLink(post.Title, "Post", "Home", new
+       {
+           year = post.CreateTime.Value.Year,
+           month = post.CreateTime.Value.Month,
+           title = post.Urlslug,
+       }, new
+       {
+           title = post.Title
+       })
+    </li>
+}

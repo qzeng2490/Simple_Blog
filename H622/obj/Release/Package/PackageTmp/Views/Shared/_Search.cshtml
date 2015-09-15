@@ -1,0 +1,11 @@
+﻿@using (Html.BeginForm(
+                                            "Index",
+                                            "Home",
+                                            FormMethod.Get,
+                                            new { id = "search-form" }))
+{
+    <div class="input-append">
+        @Html.TextBox("searchstring", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search">
+    </div>
+}

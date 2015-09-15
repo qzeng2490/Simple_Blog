@@ -1,0 +1,22 @@
+﻿@model H622.Models.Post
+@using System.Globalization
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    ViewBag.Title = Model.Title;
+    ViewBag.PostTitle = Model.Title;
+}
+<!-- Post Content -->
+<article>
+    
+            
+            
+    <p class="post-meta">
+        Posted by <a href="/Home/Index">Qiang Zeng</a> on  @Model.CreateTime.Value.ToString("D",
+                  CultureInfo.CreateSpecificCulture("en-US"))
+    </p>
+
+    @Html.Raw(Model.Content)
+            
+       
+</article>
